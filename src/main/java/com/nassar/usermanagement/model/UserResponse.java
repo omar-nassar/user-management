@@ -2,14 +2,12 @@ package com.nassar.usermanagement.model;
 
 import java.util.List;
 
-public class User {
+public class UserResponse {
     private int id;
     private String name;
     private List<String> skills;
 
-    public User() {}
-
-    public User(int id, String name, List<String> skills) {
+    public UserResponse(int id, String name, List<String> skills) {
         this.id = id;
         this.name = name;
         this.skills = skills;

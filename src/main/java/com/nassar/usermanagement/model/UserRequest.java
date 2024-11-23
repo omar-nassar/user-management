@@ -1,26 +1,18 @@
 package com.nassar.usermanagement.model;
 
+import jakarta.validation.constraints.Pattern;
+
 import java.util.List;
 
-public class User {
-    private int id;
+public class UserRequest {
+
+    @Pattern(regexp = "^[A-Za-z]{3,10}$", message = "Name can contain characters only")
     private String name;
     private List<String> skills;
 
-    public User() {}
-
-    public User(int id, String name, List<String> skills) {
-        this.id = id;
+    public UserRequest(String name, List<String> skills) {
         this.name = name;
         this.skills = skills;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
